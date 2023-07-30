@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BVICAM-BasketBallGround</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font: 12px/1.4 'Trebuchet MS', Helvetica, sans-serif;
+            color: #000000;
+            text-align: left;
+            word-wrap: break-word;
+            height: 100%;
+            /* overflow: hidden; */
+        }
+
+        div {
+            display: block;
+            border: 0;
+        }
+
+        #logo img {
+            height: auto;
+            width: 200px;
+            position: absolute;
+            margin-top: 5px;
+            margin-left: 139px;
+        }
+
+        #name-and-slogan {
+            float: right;
+            text-align: center;
+            padding-top: 3px;
+            margin: 20px 225px 30px 15px;
+            width: 740px;
+            height: 50px;
+        }
+
+        #website_name_high {
+            position: absolute;
+            margin-top: -9px;
+            margin-left: -58px;
+            font-size: 25px;
+            font-weight: normal;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: -1px 1px 1px #000;
+        }
+
+        #website_name_low {
+            position: absolute;
+            margin-top: 26px;
+            margin-left: 6px;
+            color: #0D0070;
+            /* font-family: "Times New Roman", Times, serif; */
+            font-size: 25px;
+            font-weight: normal;
+            outline: none;
+            text-align: center;
+            text-decoration: none;
+            text-shadow: -1px 1px 1px #000;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        #golden_jubilee {
+            position: absolute;
+            margin-top: 8px;
+            padding-left: 980px;
+            z-index: 0;
+        }
+
+        #golden_jubilee img {
+            height: 90px;
+            border-radius: 10px;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            max-height: 38em;
+        }
+
+        #img-ground {
+            margin-top: 170px;
+            margin-left: 325px;
+        }
+
+        #img-ground img {
+            width: 63em;
+            max-height: 31em;
+            margin-left: -31px;
+        }
+
+        #banner1 {
+            letter-spacing: 0.2px;
+            height: 42px;
+            margin-bottom: 5px;
+        }
+
+        #banner1 .region {
+            margin-top: 2px;
+            margin-left: 15px;
+        }
+
+        #banner1 .block {
+            clear: both;
+            margin-top: 6px;
+        }
+
+        #banner1 .block .content {
+            margin-top: 0;
+        }
+
+        #banner1 .content {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        #banner1 .block h2 {
+            margin: 0;
+        }
+
+        #banner1 h2 {
+            display: none;
+        }
+
+        #banner2 {
+            letter-spacing: 0.2px;
+            height: 42px;
+            margin-bottom: 1px;
+        }
+
+        #banner2 .region {
+            margin-top: 2px;
+            margin-left: 15px;
+        }
+
+        #banner2 .block {
+            clear: both;
+            margin-top: 6px;
+        }
+
+        #banner2 .block .content {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        #banner2 .content {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+        #banner2 .block h2 {
+            margin: 0;
+        }
+
+        #banner2 h2 {
+            display: none;
+        }
+
+        h2 {
+            font-size: 160%;
+            font-weight: bold;
+            text-align: center;
+            font-family: Arial, Helvetica, Sans Serif;
+            margin-block-start: 0.83em;
+            margin-block-end: 0.83em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+
+        ul {
+            border: 0;
+            list-style-type: disc;
+            display: table-column;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+
+        .sf-menu {
+            line-height: 1.0;
+            margin: 0;
+        }
+
+        .sf-menu.sf-style-default {
+            float: left;
+        }
+
+        .clearfix ::after {
+            content: " ";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+
+        html[xmlns] .clearfix {
+            display: block;
+        }
+
+        li {
+            border: 0;
+            display: list-item;
+            text-align: -webkit-match-parent;
+            margin-top: 2px;
+            margin-bottom: 3px;
+            list-style: none;
+            padding: 0;
+            background-color: transparent;
+            font-size: 1.0em;
+        }
+
+        .sf-menu.sf-style-default li,
+        .sf-menu.sf-style-default.sf-navbar {
+            background: #4b87d4;
+        }
+
+        .sf-menu li {
+            float: left;
+            position: relative;
+            z-index: 498;
+        }
+
+        .sf-menu * {
+            margin: 0;
+            list-style: none;
+        }
+
+        .sf-menu a {
+            position: relative;
+        }
+
+        .sf-menu.sf-style-default a.sf-with-ul {
+            padding-right: 2.25em;
+        }
+
+        .sf-menu.sf-style-default a {
+            padding: 0.75em 1em;
+        }
+
+        #banner1 ul {
+            margin-top: 35px;
+            margin-left: 75px;
+            margin-bottom: 63px;
+            list-style: none;
+            padding: 8px 91px;
+            background-color: #4b87d4;
+            font-size: 1.0em;
+            border: 12px solid #4b87d4;
+            border-radius: 50px;
+        }
+
+        #banner1 li a {
+            color: #000 !important;
+            text-decoration: none;
+            float: left;
+            display: block;
+            border: none;
+            text-align: center;
+            width: auto !important;
+            font-weight: bold;
+            margin-left: -12px;
+            margin-right: 5px;
+            padding-left: 19px;
+        }
+
+        #banner1 li a :hover {
+            color: aquamarine;
+            cursor: pointer;
+        }
+
+        a:-webkit-any-link {
+            cursor: pointer;
+        }
+
+        #banner1 .sf-sub-indicator {
+            background: url(http://www.bvicam.in/sites/all/themes/ramp/images/arrows-ffffff-rtl.png) no-repeat;
+            right: -2px;
+            top: 15px;
+        }
+
+        span {
+            border: 0;
+        }
+
+        .sf-sub-indicator {
+            overflow: hidden;
+            position: absolute;
+            text-indent: -999em;
+            width: 10px;
+        }
+
+        #img-ground {
+            margin-top: 170px;
+            margin-left: 300px;
+        }
+
+        #banner2 ul {
+            margin-top: 45px;
+            margin-left: 124px;
+            margin-bottom: 3px;
+            list-style: none;
+            padding: 8px 91px;
+            background-color: #4b87d4;
+            font-size: 1.0em;
+            border: 12px solid #4b87d4;
+            border-radius: 50px;
+        }
+
+        #banner2 li a {
+            color: #000 !important;
+            text-decoration: none;
+            float: left;
+            display: block;
+            border: none;
+            text-align: center;
+            width: auto !important;
+            font-weight: bold;
+            margin-left: -12px;
+            margin-right: 5px;
+            padding-left: 19px;
+        }
+
+        #banner2 li a :hover {
+            color: aquamarine;
+            cursor: pointer;
+        }
+
+        #banner2 .sf-sub-indicator {
+            background: url(http://www.bvicam.in/sites/all/themes/ramp/images/arrows-ffffff-rtl.png) no-repeat;
+            right: -2px;
+            top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='logo'>
+        <img src="http://www.bvicam.in/sites/default/files/BVICAM%20red%20logo_2.png" alt="BVPlogo">
+    </div>
+
+    <div id="name-and-slogan">
+        <div id="site-name">
+            <strong>
+                <strong>
+                    <div id="website_name_high">Bharati Vidyapeeth's Institute of</div>
+                    <div id="website_name_low">Computer Applications and Management (BVICAM)
+                        <br>
+                        MCA &nbsp;| &nbsp;BA(JMC)
+                    </div>
+                </strong>
+            </strong>
+        </div>
+        <strong></strong>
+    </div>
+
+    <div id="golden_jubilee">
+        <img src="http://bvicam.in/sites/all/themes/ramp/images/large/golden_jubilee.png">
+    </div>
+
+    <div id="banner1" class="clearfix">
+        <div class="region region-banner">
+            <div id="block-superfish-1" class="clear-block block block-superfish">
+                <h2>Main Menu</h2>
+                <div class="content">
+                    <ul id="superfish-1"
+                        class="sf-menu main-menu sf-horizontal sf-style-default sf-total-items-11 sf-parent-items-8 sf-single-items-3">
+                        <li id="menu-1152-1"
+                            class="first odd sf-item-1 sf-depth-1 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent">
+                            <a href="http://bvicam.in/newsevent-view" class="sf-depth-1  menuparent">
+                                Notice Board
+                            </a>
+                        </li>
+                        <li id="menu-218-1" class="middle even sf-item-2 sf-depth-1 sf-no-children"><a
+                                href="http://bvicam.in/" title="www.bvicam.ac.in" class="sf-depth-1 ">Home</a></li>
+                        <li id="menu-386-1"
+                            class="middle odd sf-item-3 sf-depth-1 sf-total-children-14 sf-parent-children-0 sf-single-children-14 menuparent">
+                            <a href="http://bvicam.in/about-us" title="About the Institute"
+                                class="sf-depth-1  menuparent">
+                                About Us
+                            </a>
+                        </li>
+                        <li id="menu-327-1"
+                            class="active-trail middle even sf-item-4 sf-depth-1 sf-total-children-14 sf-parent-children-1 sf-single-children-13 menuparent">
+                            <a href="http://bvicam.in/academicoverview" title=""
+                                class="sf-depth-1  menuparent">Academics</a>
+                        </li>
+                        <li id="menu-333-1"
+                            class="middle odd sf-item-5 sf-depth-1 sf-total-children-10 sf-parent-children-0 sf-single-children-10 menuparent">
+                            <a href="http://bvicam.in/computerresourcecenter" title="BVICAM&#039;s Resources"
+                                class="sf-depth-1  menuparent">Infrastructure</a>
+                        </li>
+                        <li id="menu-1132-1"
+                            class="middle even sf-item-6 sf-depth-1 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent">
+                            <a href="http://bvicam.in/activities" title="" class="sf-depth-1  menuparent">Activities</a>
+                        </li>
+                        <li id="menu-353-1"
+                            class="middle odd sf-item-7 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent">
+                            <a href="http://bvicam.in/careers-directormessage" title=""
+                                class="sf-depth-1  menuparent">Placements</a>
+                        </li>
+                        <li id="menu-349-1"
+                            class="middle even sf-item-8 sf-depth-1 sf-total-children-7 sf-parent-children-0 sf-single-children-7 menuparent">
+                            <a href="http://bvicam.in/publications" title=""
+                                class="sf-depth-1  menuparent">Publications</a>
+                        </li>
+                        <li id="menu-1151-1"
+                            class="middle odd sf-item-9 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent">
+                            <a href="http://bvicam.in/" title class="sf-depth-1  menuparent">Alumni</a>
+                        </li>
+                        <li id="menu-1176-1" class="middle even sf-item-10 sf-depth-1 sf-no-children"><a
+                                href="http://bvicam.in/press-release" title="" class="sf-depth-1 ">Press Release</a>
+                        </li>
+                        <li id="menu-1720-1" class="last odd sf-item-11 sf-depth-1 sf-no-children"><a
+                                href="http://bvicam.in/blog/" class="sf-depth-1 ">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="img-ground">
+        <img src="Images/BasketBallground.jpg" alt="BVP-BasketBallGround">
+    </div>
+
+    <div id="banner2" class="clearfix">
+        <div class="region region-banner">
+            <div id="block-superfish-1" class="clear-block block block-superfish">
+                <h2>Main Menu</h2>
+                <div class="content">
+                    <ul id="superfish-1"
+                        class="sf-menu main-menu sf-horizontal sf-style-default sf-total-items-11 sf-parent-items-8 sf-single-items-3">
+                        <li id="menu-1152-1"
+                            class="first odd sf-item-1 sf-depth-1 sf-total-children-12 sf-parent-children-0 sf-single-children-12 menuparent">
+                            <a href="http://bvicam.in/contact-us" class="sf-depth-1  menuparent">
+                                Contact Us
+                            </a>
+                        </li>
+                        <li id="menu-386-1"
+                            class="middle odd sf-item-3 sf-depth-1 sf-total-children-14 sf-parent-children-0 sf-single-children-14 menuparent">
+                            <a href="http://bvicam.in/content/student-grievances-redressal-committee-sgrc" title=""
+                                class="sf-depth-1  menuparent">
+                                SGRC
+                            </a>
+                        </li>
+                        <li id="menu-327-1"
+                            class="active-trail middle even sf-item-4 sf-depth-1 sf-total-children-14 sf-parent-children-1 sf-single-children-13 menuparent">
+                            <a href="http://www.bvicam.in/grievances/" title=""
+                                class="sf-depth-1  menuparent">Grievances
+                                Redressal</a>
+                        </li>
+                        <li id="menu-333-1"
+                            class="middle odd sf-item-5 sf-depth-1 sf-total-children-10 sf-parent-children-0 sf-single-children-10 menuparent">
+                            <a href="http://bvicam.in/content/nirf-2023" title="BVICAM&#039;s Resources"
+                                class="sf-depth-1  menuparent">NIRF-2023 Data</a>
+                        </li>
+                        <li id="menu-1132-1"
+                            class="middle even sf-item-6 sf-depth-1 sf-total-children-8 sf-parent-children-0 sf-single-children-8 menuparent">
+                            <a href="http://bvicam.in/md" title="" class="sf-depth-1  menuparent">Mandatory Disclosures</a>
+                        </li>
+                        <li id="menu-353-1"
+                            class="middle odd sf-item-7 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent">
+                            <a href="http://bvicam.in/aboutparentbody" title=""
+                                class="sf-depth-1  menuparent">BVP</a>
+                        </li>
+                        <li id="menu-349-1"
+                            class="middle even sf-item-8 sf-depth-1 sf-total-children-7 sf-parent-children-0 sf-single-children-7 menuparent">
+                            <a href="http://www.ipu.ac.in/" title=""
+                                class="sf-depth-1  menuparent">GGSIPU</a>
+                        </li>
+                        <li id="menu-1151-1"
+                            class="middle odd sf-item-9 sf-depth-1 sf-total-children-5 sf-parent-children-0 sf-single-children-5 menuparent">
+                            <a href="http://www.bvicam.in/content/extension-approvals-aicte" title class="sf-depth-1  menuparent">AICTE(EOA)</a>
+                        </li>
+                        <li id="menu-1176-1" class="middle even sf-item-10 sf-depth-1 sf-no-children"><a
+                                href="https://www.ugc.gov.in/" title="" class="sf-depth-1 ">UGC</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
